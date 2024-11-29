@@ -1,0 +1,8 @@
+.primary {
+  background-color: #0070f3;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
