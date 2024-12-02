@@ -1,6 +1,6 @@
 import BackButton from '@/components/utils/backbutton'
 
-export default function data(){
+export default function Dashboard(){
   return(
     <div>
       <BackButton />

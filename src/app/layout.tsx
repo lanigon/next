@@ -1,8 +1,9 @@
 import "./globals.css";
+import Web3Provider from "@/wrappers/web3Provider";
 
 export const metadata = {
-  title: 'My App',
-  description: 'A demo for a global back button in Next.js 13+',
+  title: 'INFINITE',
+  description: 'Join us for INFINITE fun',
 };
 
 export default function RootLayout({
@@ -13,7 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
+        <Web3Provider>{children}</Web3Provider>
       </body>
     </html>
   );

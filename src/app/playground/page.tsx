@@ -1,8 +1,9 @@
 'use client'
+
 import styles from '@/styles/test.module.css'
 import BackButton from '@/components/utils/backbutton'
 
-export default function data(){
+export default function Playground(){
   return(
     <div>
       <BackButton />
