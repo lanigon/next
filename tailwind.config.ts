@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
-import type { Config } from "tailwindcss";
+import type { Config } from "tailwindcss"
 
 export default {
   darkMode: ["class"], // 支持通过 class 切换暗黑模式
@@ -68,7 +68,10 @@ export default {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+      fontFamily: {
+        mc: ['var(--font-minecraft)', 'sans-serif'],
+      },
   	}
   },
   plugins: [

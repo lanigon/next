@@ -11,7 +11,7 @@ export default function Home() {
       <Header />
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
         <div className="bg-secondary-foreground text-primary-foreground p-4 rounded-lg">
-          <h1 className="text-3xl">Welcome to Tailwind in Next.js!</h1>
+          <h1 className="text-3xl font-mc">Welcome to Tailwind in Next.js!</h1>
           <p className="mt-4 text-muted mb-4">This is a sample paragraph.</p>
           <div className="flex gap-4">
             <Button className="border rounded-lg"><Link href={"/game"}>To game</Link></Button>
