@@ -1,9 +1,17 @@
+import Web3Provider from "@/wrappers/web3Provider";
 import "./globals.css";
+import localFont from "next/font/local";
 
 export const metadata = {
-  title: 'My App',
-  description: 'A demo for a global back button in Next.js 13+',
+  title: 'INFINITE',
+  description: 'Join us for INFINITE fun',
 };
+
+const minecraft = localFont({
+  src: "./fonts/Minecraft.ttf",
+  variable: "--font-minecraft",
+  weight: "100 900",
+});
 
 export default function RootLayout({
   children,
@@ -12,8 +20,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        {children}
+      <body className={minecraft.variable}>
+        <Web3Provider>{children}</Web3Provider>
       </body>
     </html>
   );
