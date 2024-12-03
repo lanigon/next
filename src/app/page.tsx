@@ -1,5 +1,6 @@
 'use client'
 import { Button } from "@/components/ui/button";
+import { MiniKit } from "@worldcoin/minikit-js";
 import Image from "next/image";
 import Link from "next/link";
 
