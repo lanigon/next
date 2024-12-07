@@ -1,3 +1,5 @@
+'use client'
+
 import BackButton from '@/components/utils/backbutton'
 
 export default function Dashboard(){
