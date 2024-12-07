@@ -1,8 +1,73 @@
 .primary {
   background-color: #0070f3;
   color: white;
+  width: 100px;
   padding: 10px 20px;
   border-radius: 4px;
   border: none;
   cursor: pointer;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes R{
+  25%{
+    rotate: 5deg;
+  }
+  75%{
+    rotate: -5deg;
+  }
+}
+@keyframes slide{
+  0%{
+    transform: translateX(-793px);
+  }
+  100%{
+    transform: translateX(0%);
+  }
+}
+.light {
+  animation: shine 3s infinite linear;
+}
+@keyframes shine {
+  0% {
+    color:beige;
+  }
+  100% {
+    left: 100%; /* 划过整个元素，消失在右侧外 */
+  }
+}
+
+.halo{
+  background-color: black;
+  filter: blur(10px);
+}
+.animatebounce {
+  animation: bounce 2s infinite linear;
+}
+
+.animateslide {
+  animation: slide 3s infinite linear;
+}
+
+.animateR{
+  animation: R 0.8s infinite linear
+}
+.animateSlide{
+  animation: slide 8s infinite linear;
 }

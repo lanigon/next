@@ -17,9 +17,19 @@ export default function Header() {
   const {wallets, ready: walletsReady} = useWallets();
   return (
     <div className='flex space-x-6 items-center'>
-      {!walletsReady && <span>Loading...</span>}
-      {walletsReady && authenticated && <span>{label(shorten(wallets[0].address))}</span>}
-      {walletsReady && <Button onClick={authenticated ? logout : login}>{authenticated ? "Logout" : "Login"}</Button>}
+      {!walletsReady ? (
+      <div className='flex items-center space-x-2'>
+        <div className='spinner-border animate-spin inline-block w-4 h-4 border-2 rounded-full'></div>
+        <span>Loading Wallet...</span>
+      </div>
+      ) : (
+        <>
+          {authenticated && wallets.length > 0 && <span>{label(shorten(wallets[0].address))}</span>}
+          <Button onClick={authenticated ? logout : login}>
+            {authenticated ? "Logout" : "Login"}
+          </Button>
+        </>
+      )}
     </div>
   )
 }

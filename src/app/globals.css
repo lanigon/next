@@ -2,11 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
-  --font-minecraft: 'Minecraft', sans-serif;
-}
 @layer base {
   :root {
+    --font-minecraft: 'Minecraft', sans-serif;
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
     --muted: 0 0% 96.1%;
