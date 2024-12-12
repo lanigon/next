@@ -24,7 +24,7 @@ export default function Header() {
       </div>
       ) : (
         <>
-          {authenticated && wallets.length > 0 && <span>{label(shorten(wallets[0].address))}</span>}
+          {authenticated && <span>{label(shorten(wallets[0].address))}</span>}
           <Button onClick={authenticated ? logout : login}>
             {authenticated ? "Logout" : "Login"}
           </Button>

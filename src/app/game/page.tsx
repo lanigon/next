@@ -1,12 +1,13 @@
 'use client'
 
 import BackButton from '@/components/utils/backbutton'
+import Pixi from '@/components/pixi/pixi';
 
 export default function Game(){
-  return(
+  return (
     <div>
       <BackButton />
-      <p>1</p>
+      <Pixi />
     </div>
   )
 }
