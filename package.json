@@ -9,7 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@esotericsoftware/spine-pixi-v7": "~4.2.0",
     "@pixi/react": "7",
+    "@pixi/sound": "^6.0.1",
+    "@pixi/ui": "^2.2.0",
     "@privy-io/react-auth": "^1.95.2",
     "@privy-io/wagmi": "^0.2.12",
     "@radix-ui/react-avatar": "^1.1.1",

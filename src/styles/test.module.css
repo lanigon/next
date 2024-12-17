@@ -16,14 +16,6 @@
     transform: translateX(-100%);
   }
 }
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
 
 @keyframes R{
   25%{
@@ -57,10 +49,29 @@
   background-color: black;
   filter: blur(10px);
 }
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
 .animatebounce {
-  animation: bounce 2s infinite linear;
+  animation: bounce 2s infinite linear forwards;
 }
 
+@keyframes _rotate {
+  0%, 100% {
+    transform: translateY(0px) rotateY(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotateY(360deg);
+  }
+}
+.rotate{
+  animation: _rotate 2s linear 1 forwards;
+}
 .animateslide {
   animation: slide 3s infinite linear;
 }

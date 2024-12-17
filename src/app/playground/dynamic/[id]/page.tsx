@@ -12,13 +12,13 @@ type SearchParams = {
 };
 
 type Props = {
-  params: Promise<Params>;
-  searchParams: Promise<SearchParams>;
+  params: Params;
+  searchParams: SearchParams;
 };
 
 export default function DynamicRoute({ params, searchParams }: Props) {
-  const resolvedParams = React.use(params);
-  const resolvedSearchParams = React.use(searchParams);
+  const resolvedParams = params;
+  const resolvedSearchParams = searchParams;
 
   const { id } = resolvedParams;
   const problem = resolvedSearchParams.problem || "No problem specified";

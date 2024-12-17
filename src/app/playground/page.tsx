@@ -4,15 +4,19 @@ import styles from '@/styles/test.module.css'
 import BackButton from '@/components/utils/backbutton'
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const imgs = ["/image.jpg", "/image.jpg", "/image.jpg", "/image.jpg", "/image.jpg", "/image.jpg"]
 
 export default function Playground(){
   const canvasRef = useRef<HTMLCanvasElement | null>(null)
+  const [rotate, setRotate] = useState(false)
   const router = useRouter()
   const toDynamic = () => {
     router.push(`/playground/dynamic/344?problem=test`)
+  }
+  const rot = () => {
+    setRotate(!rotate)
   }
   useEffect(() => {
     const canvas = canvasRef.current
@@ -48,7 +52,9 @@ export default function Playground(){
         {/* image */}
         <div className='flex flex-col items-center w-full'>
           <h1 className='mb-4 font-extrabold font-mc'>imagetest</h1>
-          <Image src="/image.jpg" alt="test" width={100} height={100} className={`${styles.animatebounce} my-3`} />
+          <Image src="/image.jpg" alt="test" width={100} height={100} className={`${styles.animatebounce}
+          ${rotate ? styles.rotate : ""} my-3`} 
+          onClick={rot} onAnimationEnd={rot} />
           <div className='w-[400px] h-[100px] border-l-2 border-r-2 overflow-hidden relative'>
             <div className={`flex justify-center gap-x-8 absolute ${styles.animateSlide}`}>
               {imgs.concat(imgs).map((url, index)=>(
